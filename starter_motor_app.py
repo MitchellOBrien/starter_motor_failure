@@ -38,7 +38,7 @@ app_mode = st.sidebar.selectbox('Select Page',['Data Description','Starter Motor
 
 if app_mode == 'Data Description':
         
-    data_path = 'C:\\Users\\H244746\\Desktop\\Feature Slider Example\\data_dictionary.xlsx'
+    data_path = 'data_dictionary.xlsx'
     data_dict = pd.read_excel(data_path, sheet_name = 'Sheet1')
     
     
@@ -59,7 +59,7 @@ elif app_mode == 'Starter Motor Fault Prediction':
     # Get input data from app
     st.subheader('Please specify the time it takes to start the APU.')
     st.sidebar.header("Information about the APU :")
-    start_time = st.sidebar.slider('Start Time',0,200,0,)
+    start_time = st.sidebar.slider('Start Time',0,90,0,)
 
 
 
@@ -71,7 +71,7 @@ elif app_mode == 'Starter Motor Fault Prediction':
     
     
     # Load model pipeline
-    model_path = 'C:\\Users\\H244746\\Desktop\\Feature Slider Example\\model\\starter_motor_classifier.sav'
+    model_path = 'model\\starter_motor_classifier.sav'
     with open(model_path, 'rb') as handle:
         model = pickle.load(handle)
       
