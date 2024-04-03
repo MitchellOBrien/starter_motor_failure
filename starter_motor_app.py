@@ -71,7 +71,7 @@ elif app_mode == 'Starter Motor Fault Prediction':
     
     
     # Load model pipeline
-    model_path = 'model\\starter_motor_classifier.sav'
+    model_path = os.path.join('model', 'starter_motor_classifier.sav')
     with open(model_path, 'rb') as handle:
         model = pickle.load(handle)
       
